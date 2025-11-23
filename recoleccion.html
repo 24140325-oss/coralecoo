@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>CORALECO | Recolección y Limpieza</title>
+    
+    <style>
+        /* Estilo del cuerpo (Consistente con las otras páginas) */
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url('fondo_sutil.jpg'); /* Asegúrate de que esta imagen exista */
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #f8f9fa; 
+        }
+       
+        /* Colores Consistentes con tu proyecto */
+        .bg-ods-14 {
+            background-color: #386fd6 !important;
+        }
+       
+        .btn-coral {
+            color: #ffffff;
+            background-color: #133c88; /* Azul oscuro */
+            border-color: #e6e9f8;
+        }
+        .btn-coral:hover {
+            color: #133c88;
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        /* Estilo para el enlace activo en la Navbar */
+        .navbar-nav .nav-item .nav-link.active {
+            color: #ffffff !important;
+            border-bottom: 2px solid #ffffff;
+        }
+        
+        /* Estilos Específicos de la página de Recolección */
+        .reco-hero {
+            background: url('peces.jpg') no-repeat center center; /* Imagen representativa de limpieza */
+            background-size: cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .reco-hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5); 
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }
+        
+        /* Estilo para las secciones de contenido intercalado */
+        .intercalado {
+            padding: 50px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .intercalado:last-child {
+            border-bottom: none;
+        }
+
+        .intercalado h3 {
+            color: #133c88; /* Azul oscuro de CORALECO */
+            font-weight: bold;
+        }
+
+        .img-fluid-shadow {
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            height: 300px; /* Altura fija para consistencia */
+            object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+        }
+
+        /* Estilo para el Acordeón de Impacto */
+        .accordion-item {
+            border-left: 5px solid #386fd6; /* Destacar con el color ODS 14 */
+            margin-bottom: 10px;
+        }
+        
+        .accordion-button {
+            color: #133c88 !important;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg bg-ods-14" data-bs-theme="dark">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="index.html">
+                <img src="logo coralecooo.png" alt="Logo CORALECO" width="215" height="120" class="d-inline-block align-text-top">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Quienes Somos
+                        </a>
+                        <ul class="dropdown-menu">
+                             <li><a class="dropdown-item active" href="index.html">Pagina Principal</a></li>
+                            <li><a class="dropdown-item" href="nuestra historia.html">Nuestra Historia</a></li>
+                            <li><a class="dropdown-item" href="mision y vision.html">Misión y Visión</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="ods.html">ODS 14</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nuestros Proyectos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="recoleccion.html">Recolección y Limpieza</a></li>
+                            <li><a class="dropdown-item" href="productos.html">Productos Reciclados</a></li>
+                            <li><a class="dropdown-item" href="campañas.html">Campañas de Conciencia</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda (Productos Reciclados)</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                
+                <a href="arrecife.html" class="btn btn-coral">
+                    ¡Apoya un Arrecife!
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+    <header class="reco-hero">
+        <div class="reco-hero-overlay"></div>
+        <div class="container position-relative z-1">
+            <i class="fas fa-trash-restore-alt fa-3x mb-3"></i>
+            <h1 class="display-3 fw-bold">Misión: Recolección y Limpieza</h1>
+            <p class="lead">Nuestra acción directa para salvar los océanos, una pieza de plástico a la vez.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        
+        <div class="row text-center mb-5">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="fw-bold text-primary">Detalles de Nuestras Operaciones de Campo</h2>
+                <p class="fs-5 text-muted">Convertimos la contaminación en materia prima para la economía circular.</p>
+            </div>
+        </div>
+
+        <div class="row intercalado align-items-center">
+            <div class="col-md-6 order-md-1">
+                <img src="coral.jpeg" class="img-fluid img-fluid-shadow" alt="Mapa de zonas de limpieza marina">
+            </div>
+            <div class="col-md-6 order-md-0">
+                <i class="fas fa-map-marked-alt fa-2x mb-3 text-primary"></i>
+                <h3>Enfoque Estratégico en Alto Riesgo</h3>
+                <p>No limpiamos al azar. Utilizamos datos satelitales y reportes de campo para concentrar nuestros esfuerzos en desembocaduras de ríos, manglares y arrecifes de coral que actúan como trampas de plástico.</p>
+                <p class="fw-bold" style="color: #133c88;">Máxima eficiencia para proteger ecosistemas críticos.</p>
+            </div>
+        </div>
+
+        <div class="row intercalado align-items-center">
+            <div class="col-md-6 order-md-0">
+                <img src="basura.jpeg" class="img-fluid img-fluid-shadow" alt="Plástico clasificado para reciclaje">
+            </div>
+            <div class="col-md-6 order-md-1">
+                <i class="fas fa-truck-loading fa-2x mb-3 text-primary"></i>
+                <h3>Clasificación Meticulosa en Origen</h3>
+                <p>Cada pieza de desecho se clasifica y separa en campo (PET, HDPE, LDPE, redes) antes de su transporte. Esto **maximiza la pureza** de la materia prima y garantiza la calidad de los productos de nuestra tienda.</p>
+                <p class="fw-bold" style="color: #133c88;">El 85% del material recolectado es apto para reciclaje.</p>
+            </div>
+        </div>
+
+        <div class="row intercalado align-items-center">
+            <div class="col-md-6 order-md-1">
+                <img src="buzo.jpeg" class="img-fluid img-fluid-shadow" alt="Buzos extrayendo red de pesca">
+            </div>
+            <div class="col-md-6 order-md-0">
+                <i class="fas fa-anchor fa-2x mb-3 text-primary"></i>
+                <h3>La Batalla contra las Redes Fantasma</h3>
+                <p>Las redes de pesca abandonadas son responsables de la muerte continua de fauna marina. Nuestros equipos de buceo están certificados para remover estas redes de los arrecifes, un material que luego se convierte en nuestras Tote Bags y accesorios resistentes.</p>
+                <p class="fw-bold" style="color: #133c88;">Protección directa de tortugas, delfines y corales.</p>
+            </div>
+        </div>
+        
+        <div class="row my-5">
+            <div class="col-lg-10 mx-auto">
+                <h3 class="fw-bold text-center mb-4" style="color: #386fd6;">Estadísticas de Impacto (Acumulado)</h3>
+                <div class="accordion" id="accordionImpacto">
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <i class="fas fa-weight-hanging me-2"></i> Kilogramos de Plástico Retirado
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionImpacto">
+                            <div class="accordion-body">
+                                En lo que va del año, hemos retirado más de 4,800 kg de desechos marinos, el equivalente al peso de un coche grande. Nuestro objetivo es superar los 6,000 kg.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-bs-expanded="false" aria-controls="collapseTwo">
+                                <i class="fas fa-users me-2"></i> Voluntarios Movilizados
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionImpacto">
+                            <div class="accordion-body">
+                                Contamos con una red activa de más de 350 voluntarios que han participado en nuestras 18 misiones de limpieza. ¡Su esfuerzo es invaluable!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-bs-expanded="false" aria-controls="collapseThree">
+                                <i class="fas fa-hand-holding-box me-2"></i> Material Reciclado y Transformado
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionImpacto">
+                            <div class="accordion-body">
+                                Gracias a nuestra clasificación rigurosa, el 85% de lo recolectado se convierte en productos de la Tienda CORALECO, creando un ciclo económico sostenible.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5 p-4 bg-primary text-white rounded shadow-lg">
+            <h3 class="fw-bold">¡Únete a la Próxima Misión!</h3>
+            <p class="fs-5">Tu ayuda es vital. Regístrate en nuestra plataforma y sé parte de la acción.</p>
+            <a href="calendario.html" class="btn btn-light btn-lg mt-3 text-primary fw-bold"><i class="fas fa-hand-rock me-2"></i>Ver Calendario y Registrarse</a>
+        </div>
+
+    </main>
+
+    <footer class="bg-ods-14 text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">CORALECO</h5>
+                    <p>Empoderando la conservación marina y la restauración de arrecifes de coral en apoyo al ODS 14: Vida Submarina.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Enlaces</h5>
+                    <p>
+                        <a href="mision y vision.html" class="text-white" style="text-decoration: none;">Misión y Visión</a>
+                    </p>
+                    <p>
+                        <a href="proyectos.html" class="text-white" style="text-decoration: none;">Proyectos</a>
+                    </p>
+                    <p>
+                        <a href="tienda.html" class="text-white" style="text-decoration: none;">Tienda</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Contacto</h5>
+                    <p>
+                        <i class="fas fa-home me-3"></i> [Dirección de la Sede]
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i> info@coraleco.org
+                    </p>
+                    <p>
+                        <i class="fas fa-phone me-3"></i> +52 (55) 5555 5555
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Síguenos</h5>
+                    <a href="#" class="btn btn-sm btn-coral me-1">FB</a>
+                    <a href="#" class="btn btn-sm btn-coral me-1">IG</a>
+                    <a href="#" class="btn btn-sm btn-coral">TW</a>
+                </div>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">
+                        © 2025 CORALECO. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <p>Comprometidos con el ODS 14.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>

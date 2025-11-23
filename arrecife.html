@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>CORALECO | Apoya un Arrecife</title>
+    
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f8f9fa; 
+        }
+        
+        
+        .bg-ods-14 {
+            background-color: #386fd6 !important; 
+        }
+        
+        .btn-coral {
+            color: #ffffff;
+            background-color: #133c88; 
+            border-color: #e6e9f8;
+        }
+        .btn-coral:hover {
+            color: #133c88;
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .navbar-nav .nav-item .nav-link.active {
+            color: #ffffff !important;
+            border-bottom: 2px solid #ffffff;
+        }
+        
+        /* Estilos Específicos para Donaciones */
+        .donacion-hero {
+           
+            background: url('corall.jpg') no-repeat center center; 
+            background-size: cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .donacion-hero-overlay {
+            background-color: rgba(0, 0, 0, 0.6); 
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }
+
+        .card-donacion {
+            border: none;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            height: 100%;
+        }
+        .card-donacion:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-header-ods {
+            background-color: #386fd6; 
+            color: white;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        
+        .card-body-ods {
+            border-bottom: 4px solid #386fd6;
+        }
+
+        .card-donacion.destacado {
+            border: 3px solid #ffc107; /* Borde amarillo  */
+            transform: scale(1.05);
+        }
+        .card-donacion.destacado .card-header-ods {
+            background-color: #ffc107;
+        }
+        .card-donacion.destacado .card-body-ods {
+            border-bottom-color: #ffc107;
+        }
+
+        .icon-impacto {
+            color: #386fd6; 
+            font-size: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg bg-ods-14" data-bs-theme="dark">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="index.html">
+                <img src="logo coralecooo.png" alt="Logo CORALECO" width="215" height="120" class="d-inline-block align-text-top">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Quienes Somos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Pagina Principal</a></li>
+                            <li><a class="dropdown-item" href="nuestra historia.html">Nuestra Historia</a></li>
+                            <li><a class="dropdown-item" href="mision y vision.html">Misión y Visión</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="ods 14.html">ODS 14</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nuestros Proyectos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="recoleccion.html">Recolección y Limpieza</a></li>
+                            <li><a class="dropdown-item" href="productos.html">Productos Reciclados</a></li>
+                            <li><a class="dropdown-item" href="campañas.html">Campañas de Conciencia</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda (Productos Reciclados)</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    
+                    
+                </ul>
+                
+                <a href="arrecife.html" class="btn btn-coral">
+                    ¡Apoya un Arrecife!
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <header class="donacion-hero">
+        <div class="donacion-hero-overlay"></div>
+        <div class="container position-relative z-1">
+            <i class="fas fa-hand-holding-heart fa-4x mb-3 text-warning"></i>
+            <h1 class="display-2 fw-bold text-shadow">Tu Apoyo es Vida para el Océano</h1>
+            <p class="lead fs-4">Cada donación, grande o pequeña, contribuye directamente a la restauración de los arrecifes de coral y la limpieza marina.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        
+        <div class="row text-center mb-5">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="fw-bold text-primary mb-3">Elige tu Nivel de Impacto</h2>
+                <p class="fs-5 text-muted">Selecciona el monto con el que deseas contribuir y mira la diferencia que puedes hacer hoy.</p>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-donacion text-center card-body-ods">
+                    <div class="card-header card-header-ods py-3">
+                        <h4 class="mb-0 fw-bold">Amigo del Océano</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <h1 class="card-title pricing-card-title fw-bold text-success">$10 USD</h1>
+                        <ul class="list-unstyled mt-3 mb-4 text-start">
+                            <li><i class="icon-impacto fas fa-tint me-2"></i> Financia un día de investigación.</li>
+                            <li><i class="icon-impacto fas fa-leaf me-2"></i> Cubre gastos básicos de logística.</li>
+                            <li><i class="icon-impacto fas fa-medal me-2"></i> Recibe nuestro boletín de impacto.</li>
+                        </ul>
+                        <a href="#" class="w-100 btn btn-lg btn-success">Donar $10 USD</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-donacion destacado text-center card-body-ods">
+                    <div class="card-header card-header-ods py-3">
+                        <h4 class="mb-0 fw-bold">Protector de Coral </h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <h1 class="card-title pricing-card-title fw-bold" style="color: #ffc107;">$50 USD</h1>
+                        <ul class="list-unstyled mt-3 mb-4 text-start">
+                            <li><i class="icon-impacto fas fa-fish me-2"></i> Adopta 1  coral para el vivero.</li>
+                            <li><i class="icon-impacto fas fa-trash-alt me-2"></i> Recolección de 10 kg de plástico.</li>
+                            <li><i class="icon-impacto fas fa-certificate me-2"></i> Certificado digital de Adopción.</li>
+                        </ul>
+                        <a href="#" class="w-100 btn btn-lg btn-warning text-dark fw-bold">Donar $50 USD</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card card-donacion text-center card-body-ods">
+                    <div class="card-header card-header-ods py-3">
+                        <h4 class="mb-0 fw-bold">Arquitecto de Arrecifes</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <h1 class="card-title pricing-card-title fw-bold text-danger">$100 USD</h1>
+                        <ul class="list-unstyled mt-3 mb-4 text-start">
+                            <li><i class="icon-impacto fas fa-anchor me-2"></i> Restaura 1 metro cuadrado de arrecife.</li>
+                            <li><i class="icon-impacto fas fa-camera-retro me-2"></i> Video exclusivo del área que ayudaste.</li>
+                            <li><i class="icon-impacto fas fa-user-shield me-2"></i> Mención honorífica en nuestro reporte anual.</li>
+                        </ul>
+                        <a href="#" class="w-100 btn btn-lg btn-danger">Donar $100 USD</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-md-6 col-lg-3">
+                <div class="card card-donacion text-center card-body-ods">
+                    <div class="card-header card-header-ods py-3">
+                        <h4 class="mb-0 fw-bold">Monto Personalizado</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        <h1 class="card-title pricing-card-title fw-bold text-primary">Otro USD</h1>
+                        <p class="text-muted mt-3 mb-4">Ingresa la cantidad que desees aportar. ¡Cada peso cuenta!</p>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control text-center" placeholder="Monto" min="5" value="25">
+                            <span class="input-group-text">USD</span>
+                        </div>
+                        <a href="#" class="w-100 btn btn-lg btn-primary">Donar Ahora</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row mt-5 pt-4 border-top">
+            <div class="col-lg-6 mb-4">
+                <h3 class="fw-bold mb-3" style="color: #133c88;"><i class="fas fa-chart-line me-2"></i> ¿Cómo se Utiliza mi Donación?</h3>
+                <p>El 90% de los fondos se destina directamente a proyectos de campo (compra de esquejes, materiales de restauración, y equipo de limpieza). El 10% restante cubre costos administrativos y de comunicación.</p>
+                <div class="progress" role="progressbar" aria-label="Impacto de Fondos" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 30px;">
+                    <div class="progress-bar bg-success" style="width: 90%">90% Proyectos de Campo</div>
+                    <div class="progress-bar bg-info" style="width: 10%">10% Administración</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mb-4">
+                 <h3 class="fw-bold mb-3" style="color: #133c88;"><i class="fas fa-credit-card me-2"></i> Métodos de Pago Seguros</h3>
+                 <p>Procesamos todas las donaciones a través de plataformas seguras y reconocidas internacionalmente.</p>
+                 <div class="d-flex gap-3 fs-1 text-muted">
+                    <i class="fab fa-cc-paypal" style="color: #0070ba;"></i>
+                    <i class="fab fa-cc-visa" style="color: #133c88;"></i>
+                    <i class="fab fa-cc-mastercard" style="color: #ff5f00;"></i>
+                    <i class="fas fa-university" style="color: #386fd6;"></i>
+                 </div>
+                 <a href="contacto.html" class="btn btn-outline-primary mt-3">Ver Opciones de Donación Mayor</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-ods-14 text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">CORALECO</h5>
+                    <p>Empoderando la conservación marina y la restauración de arrecifes de coral en apoyo al ODS 14: Vida Submarina.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Enlaces</h5>
+                    <p>
+                        <a href="mision y vision.html" class="text-white" style="text-decoration: none;">Misión y Visión</a>
+                    </p>
+                    <p>
+                        <a href="recoleccion.html" class="text-white" style="text-decoration: none;">Proyectos</a>
+                    </p>
+                    <p>
+                        <a href="tienda.html" class="text-white" style="text-decoration: none;">Tienda</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Contacto</h5>
+                    <p>
+                        <i class="fas fa-home me-3"></i> [Dirección de la Sede]
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i> info@coraleco.org
+                    </p>
+                    <p>
+                        <i class="fas fa-phone me-3"></i> +52 (55) 5555 5555
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Síguenos</h5>
+                    <a href="#" class="btn btn-sm btn-coral me-1"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn btn-sm btn-coral me-1"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="btn btn-sm btn-coral"><i class="fab fa-twitter"></i></a>
+                </div>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">
+                        © 2025 CORALECO. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <p>Comprometidos con el ODS 14.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

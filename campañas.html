@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>CORALECO | Campañas de Conciencia</title>
+    
+    <style>
+        /* Estilo del cuerpo (Consistente con las otras páginas) */
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url('fondo_sutil.jpg'); 
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #f8f9fa; 
+        }
+       
+        /* Colores Consistentes con tu proyecto */
+        .bg-ods-14 {
+            background-color: #386fd6 !important; /* Azul ODS 14 */
+        }
+       
+        .btn-coral {
+            color: #ffffff;
+            background-color: #133c88; /* Azul oscuro */
+            border-color: #e6e9f8;
+        }
+        .btn-coral:hover {
+            color: #133c88;
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        /* Estilo para el enlace activo en la Navbar */
+        .navbar-nav .nav-item .nav-link.active {
+            color: #ffffff !important;
+            border-bottom: 2px solid #ffffff;
+        }
+        
+        /* Estilos Específicos de la página de Conciencia */
+        .conciencia-hero {
+            background: url('PEZ.jpg') no-repeat center center; /* Imagen representativa de vida marina o impacto */
+            background-size: cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .conciencia-hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5); 
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }
+        
+        .impact-card {
+            background-color: white;
+            padding: 25px;
+            border-left: 5px solid #133c88; /* Detalle Azul oscuro */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        
+        /* Estilos para las nuevas tarjetas de Colaboración */
+        .collab-card {
+            background-color: #e6e9f8; /* Azul muy claro */
+            border: 1px solid #c8d3e8;
+            border-radius: 8px;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .collab-icon {
+            font-size: 2.2rem;
+            color: #133c88; 
+            margin-bottom: 10px;
+        }
+
+
+        .impact-icon {
+            font-size: 2.5rem;
+            color: #386fd6; /* Azul ODS 14 */
+            margin-bottom: 15px;
+        }
+
+        .callout-blue {
+            border-left: 5px solid #386fd6;
+            background-color: #e6e9f8;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg bg-ods-14" data-bs-theme="dark">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="index.html">
+                <img src="logo coralecooo.png" alt="Logo CORALECO" width="215" height="120" class="d-inline-block align-text-top">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Quienes Somos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="nuestra historia.html">Nuestra Historia</a></li>
+                            <li><a class="dropdown-item" href="mision y vision.html">Misión y Visión</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="ods 14.html">ODS 14</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nuestros Proyectos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="recoleccion.html">Recolección y Limpieza</a></li>
+                            <li><a class="dropdown-item" href="productos.html">Productos Reciclados</a></li>
+                            <li><a class="dropdown-item active" href="campañas.html">Campañas de Conciencia</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda (Productos Reciclados)</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+                
+                <a href="arrecife.html" class="btn btn-coral">
+                    ¡Apoya un Arrecife!
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+    <header class="conciencia-hero">
+        <div class="conciencia-hero-overlay"></div>
+        <div class="container position-relative z-1">
+            <i class="fas fa-bullhorn fa-3x mb-3"></i>
+            <h1 class="display-3 fw-bold">Campañas de Conciencia</h1>
+            <p class="lead">Educar es el primer paso para proteger. Conoce el impacto del plástico en el océano y cómo puedes ser la solución.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        
+        <div class="row text-center mb-5">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="fw-bold text-primary">El Vínculo entre tu Plástico y la Vida Marina</h2>
+                <p class="fs-5 text-muted">Cada pieza de plástico que desechamos y no se gestiona correctamente tiene un camino directo hacia nuestros cuerpos de agua, atacando a las especies y nuestros ecosistemas.</p>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <h3 class="fw-bold text-center mb-4" style="color: #386fd6;">El Ataque a las Especies y Ecosistemas</h3>
+            
+            <div class="col-md-4">
+                <div class="impact-card text-center">
+                    <i class="impact-icon fas fa-fish"></i>
+                    <h4 class="fw-bold" style="color: #133c88;">Asfixia y Enredo</h4>
+                    <p>Redes fantasma y bolsas plásticas envuelven a la fauna. Esto causa mutilaciones, impide la alimentación y lleva a la muerte por asfixia.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="impact-card text-center">
+                    <i class="impact-icon fas fa-skull-crossbones"></i>
+                    <h4 class="fw-bold" style="color: #133c88;">Ingestión de Microplásticos</h4>
+                    <p>Las especies confunden los fragmentos con alimento. Esto provoca inanición y la transferencia de toxinas a la cadena alimenticia.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="impact-card text-center">
+                    <i class="impact-icon fas fa-water"></i>
+                    <h4 class="fw-bold" style="color: #133c88;">Degradación de Arrecifes</h4>
+                    <p>El plástico transporta patógenos y bloquea la luz. Este estrés incrementa la susceptibilidad de los corales, destruyendo el hábitat.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center mt-5 mb-4">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="fw-bolder" style="color: #133c88;">Formas de Trabajar con Nosotros</h2>
+                <p class="fs-5 text-muted">Toda colaboración, ya sea financiera, corporativa o de servicios, multiplica nuestro impacto en la vida marina.</p>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            
+            <div class="col-md-4">
+                <div class="collab-card">
+                    <i class="collab-icon fas fa-handshake"></i>
+                    <h4 class="fw-bold" style="color: #133c88;">1. Conviértete en Socio</h4>
+                    <p class="text-muted small">Para garantizar una asociación con intereses afines y una oportunidad mutuamente beneficiosa, las empresas interesadas deben ponerse en contacto con nosotros. Podemos analizar la estructura idónea que se ajuste a las ambiciones de ambas partes.</p>
+                    
+                    
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="collab-card">
+                    <i class="collab-icon fas fa-donate"></i>
+                    <h4 class="fw-bold" style="color: #133c88;">2. Filantropía y Subvenciones</h4>
+                    <p class="text-muted small">También puedes mostrar tu apoyo mediante financiación colectiva, donaciones y subvenciones. ¿Qué mejor manera de concienciar que colaborar con diversas redes de diferentes sectores?</p>
+                    <p class="text-muted small">Ayúdanos a compartir conocimientos y estrategias prácticas con tu comunidad y amplía nuestro alcance.</p>
+                    
+                    <div class="text-center mt-4">
+                        <a href="arrecife.html" class="btn btn-coral btn-sm">Conéctate con nosotros</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="collab-card">
+                    <i class="collab-icon fas fa-hands-helping"></i>
+                    <h4 class="fw-bold" style="color: #133c88;">3. Apoyo en Especie</h4>
+                    <p class="text-muted small">El apoyo corporativo no tiene por qué ser financiero. Puede brindar una ayuda significativa aportando su tiempo, productos y servicios, lo que permitirá a CORALECO destinar más recursos a los pilares del plan</p>
+                    
+                    <div class="text-center mt-5">
+                        <a href="contacto.html" class="btn btn-coral btn-sm">Conéctate con nosotros</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5 p-4 bg-primary text-white rounded shadow-lg">
+            <h3 class="fw-bold">Cada Producto Cierra el Ciclo</h3>
+            <p class="fs-5">Tu compra de una hoodie, cepillo o tote bag reciclado es tu apoyo directo a la limpieza y tu rechazo al plástico de un solo uso.</p>
+            <a href="tienda.html" class="btn btn-light btn-lg mt-3 text-primary fw-bold"><i class="fas fa-tag me-2"></i>Ver Productos de Larga Duración</a>
+        </div>
+
+    </main>
+
+    <footer class="bg-ods-14 text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">CORALECO</h5>
+                    <p>Empoderando la conservación marina y la restauración de arrecifes de coral en apoyo al ODS 14: Vida Submarina.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Enlaces</h5>
+                    <p>
+                        <a href="mision y vision.html" class="text-white" style="text-decoration: none;">Misión y Visión</a>
+                    </p>
+                    <p>
+                        <a href="proyectos.html" class="text-white" style="text-decoration: none;">Proyectos</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">Tienda</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Contacto</h5>
+                    <p>
+                        <i class="fas fa-home me-3"></i> [Dirección de la Sede]
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i> info@coraleco.org
+                    </p>
+                    <p>
+                        <i class="fas fa-phone me-3"></i> +52 (55) 5555 5555
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Síguenos</h5>
+                    <a href="#" class="btn btn-sm btn-coral me-1">FB</a>
+                    <a href="#" class="btn btn-sm btn-coral me-1">IG</a>
+                    <a href="#" class="btn btn-sm btn-coral">TW</a>
+                </div>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">
+                        © 2025 CORALECO. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <p>Comprometidos con el ODS 14.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>

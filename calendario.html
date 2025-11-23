@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>CORALECO | Calendario de Eventos</title>
+    
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f8f9fa; 
+        }
+        
+        .bg-ods-14 {
+            background-color: #386fd6 !important;
+        }
+        
+        .btn-coral {
+            color: #ffffff;
+            background-color: #133c88;
+            border-color: #e6e9f8;
+        }
+        .btn-coral:hover {
+            color: #133c88;
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .navbar-nav .nav-item .nav-link.active {
+            color: #ffffff !important;
+            border-bottom: 2px solid #ffffff;
+        }
+        
+        /* Estilos Específicos para Calendario */
+        .calendar-hero {
+           
+            background: url('oceano.jpg') no-repeat center center; 
+            background-size: cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .calendar-hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5); 
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }
+
+        .table-event {
+            vertical-align: middle;
+        }
+        
+        .table-event thead {
+            background-color: #133c88;
+            color: white;
+        }
+        
+        .event-card {
+            border-left: 5px solid #386fd6;
+            transition: all 0.3s ease;
+        }
+        .event-card:hover {
+            background-color: #e9ecef;
+        }
+
+        
+        .tag-limpieza { background-color: #0d6efd; color: white; }
+        .tag-taller { background-color: #ffc107; color: #343a40; }
+        .tag-restauracion { background-color: #28a745; color: white; }
+        .tag-charla { background-color: #dc3545; color: white; }
+        
+        .tag {
+            display: inline-block;
+            padding: 0.3em 0.6em;
+            font-size: 0.75em;
+            font-weight: bold;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: 0.25rem;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg bg-ods-14" data-bs-theme="dark">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="index.html">
+                <img src="logo coralecooo.png" alt="Logo CORALECO" width="215" height="120" class="d-inline-block align-text-top">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Quienes Somos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Pagina Principal</a></li>
+                            <li><a class="dropdown-item" href="nuestra historia.html">Nuestra Historia</a></li>
+                            <li><a class="dropdown-item" href="mision y vision.html">Misión y Visión</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="ods 14.html">ODS 14</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nuestros Proyectos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="recoleccion.html">Recolección y Limpieza</a></li>
+                            <li><a class="dropdown-item" href="productos.html">Productos Reciclados</a></li>
+                            <li><a class="dropdown-item" href="campañas.html">Campañas de Conciencia</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda (Productos Reciclados)</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    
+                
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="calendario.html">Calendario</a>
+                    </li>
+                </ul>
+                
+                <a href="arrecife.html" class="btn btn-coral">
+                    ¡Apoya un Arrecife!
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <header class="calendar-hero">
+        <div class="calendar-hero-overlay"></div>
+        <div class="container position-relative z-1">
+            <i class="fas fa-calendar-alt fa-4x mb-3"></i>
+            <h1 class="display-3 fw-bold">Calendario de Acciones</h1>
+            <p class="lead fs-4">Participa en nuestros próximos eventos: limpiezas, talleres y expediciones de restauración.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        
+        <div class="row text-center mb-5">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="fw-bold text-primary mb-3">Próximos Eventos de Conservación</h2>
+                <p class="fs-5 text-muted">A continuación, encontrarás todas las fechas y detalles para unirte a la acción.</p>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <select class="form-select" aria-label="Filtrar por Tipo">
+                    <option selected>Filtrar por Tipo de Evento</option>
+                    <option value="1">Limpieza de Playas</option>
+                    <option value="2">Taller Educativo</option>
+                    <option value="3">Restauración de Arrecifes</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select class="form-select" aria-label="Filtrar por Ubicación">
+                    <option selected>Filtrar por Ubicación</option>
+                    <option value="1">Quintana Roo</option>
+                    <option value="2">Yucatán</option>
+                    <option value="3">Baja California Sur</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-outline-secondary w-100">Restablecer Filtros</button>
+            </div>
+        </div>
+
+        <div class="table-responsive d-none d-md-block">
+            <table class="table table-hover table-striped table-event shadow">
+                <thead>
+                    <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Evento</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Ubicación</th>
+                        <th scope="col">Cupo</th>
+                        <th scope="col">Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="event-card">
+                        <td class="fw-bold">05/DIC</td>
+                        <td>Gran Limpieza de la Costa de Tulum</td>
+                        <td><span class="tag tag-limpieza">Limpieza</span></td>
+                        <td>Playa Paraíso, Tulum</td>
+                        <td>50/100</td>
+                        <td><a href="#" class="btn btn-sm btn-coral"><i class="fas fa-plus-circle me-1"></i> Inscribirse</a></td>
+                    </tr>
+                    <tr class="event-card">
+                        <td class="fw-bold">12/DIC</td>
+                        <td>Taller: Esquejes de Coral y Viveros</td>
+                        <td><span class="tag tag-taller">Taller</span></td>
+                        <td>Centro Educativo de Cancún</td>
+                        <td>15/20</td>
+                        <td><a href="#" class="btn btn-sm btn-coral"><i class="fas fa-plus-circle me-1"></i> Inscribirse</a></td>
+                    </tr>
+                    <tr class="event-card">
+                        <td class="fw-bold">18/DIC</td>
+                        <td>Expedición de Trasplante (Certificados)</td>
+                        <td><span class="tag tag-restauracion">Restauración</span></td>
+                        <td>Arrecife Alacranes, Yucatán</td>
+                        <td>Completo</td>
+                        <td><button class="btn btn-sm btn-secondary" disabled>Cupo Lleno</button></td>
+                    </tr>
+                     <tr class="event-card">
+                        <td class="fw-bold">20/ENE</td>
+                        <td>Charla Virtual: El Futuro del Mar Caribe</td>
+                        <td><span class="tag tag-charla">Charla</span></td>
+                        <td>En Línea (Zoom)</td>
+                        <td>Ilimitado</td>
+                        <td><a href="#" class="btn btn-sm btn-coral"><i class="fas fa-video me-1"></i> Ver Link</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="d-md-none">
+            <div class="card event-card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold text-primary">Gran Limpieza de la Costa de Tulum</h5>
+                    <p class="card-text mb-1"><i class="fas fa-calendar-day me-2 text-info"></i> **Fecha:** 05/DIC</p>
+                    <p class="card-text mb-1"><i class="fas fa-map-marker-alt me-2 text-danger"></i> **Ubicación:** Playa Paraíso, Tulum</p>
+                    <p class="card-text mb-2"><i class="fas fa-users me-2 text-success"></i> **Cupo:** 50/100</p>
+                    <span class="tag tag-limpieza mb-3">Limpieza</span>
+                    <a href="#" class="btn btn-sm btn-coral w-100"><i class="fas fa-plus-circle me-1"></i> Inscribirse</a>
+                </div>
+            </div>
+            
+             <div class="card event-card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold text-primary">Expedición de Trasplante (Certificados)</h5>
+                    <p class="card-text mb-1"><i class="fas fa-calendar-day me-2 text-info"></i> **Fecha:** 18/DIC</p>
+                    <p class="card-text mb-1"><i class="fas fa-map-marker-alt me-2 text-danger"></i> **Ubicación:** Arrecife Alacranes, Yucatán</p>
+                    <p class="card-text mb-2"><i class="fas fa-users me-2 text-success"></i> **Cupo:** Lleno</p>
+                    <span class="tag tag-restauracion mb-3">Restauración</span>
+                    <button class="btn btn-sm btn-secondary w-100" disabled>Cupo Lleno</button>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <p class="text-muted">Desliza para ver más detalles en tu computadora.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-ods-14 text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">CORALECO</h5>
+                    <p>Empoderando la conservación marina y la restauración de arrecifes de coral en apoyo al ODS 14: Vida Submarina.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Enlaces</h5>
+                    <p>
+                        <a href="mision y vision.html" class="text-white" style="text-decoration: none;">Misión y Visión</a>
+                    </p>
+                    <p>
+                        <a href="recoleccion.html" class="text-white" style="text-decoration: none;">Proyectos</a>
+                    </p>
+                    <p>
+                        <a href="tienda.html" class="text-white" style="text-decoration: none;">Tienda</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Contacto</h5>
+                    <p>
+                        <i class="fas fa-home me-3"></i> [Dirección de la Sede]
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i> info@coraleco.org
+                    </p>
+                    <p>
+                        <i class="fas fa-phone me-3"></i> +52 (55) 5555 5555
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Síguenos</h5>
+                    <a href="#" class="btn btn-sm btn-coral me-1"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="btn btn-sm btn-coral me-1"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="btn btn-sm btn-coral"><i class="fab fa-twitter"></i></a>
+                </div>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">
+                        © 2025 CORALECO. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <p>Comprometidos con el ODS 14.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

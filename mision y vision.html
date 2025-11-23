@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>CORALECO | Misión y Visión</title>
+    
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(248, 249, 250); /* Fondo gris muy claro */
+        }
+        
+        .bg-ods-14 {
+            background-color: #386fd6 !important; /* Azul ODS 14 */
+        }
+        
+        .btn-coral {
+            color: #ffffff;
+            background-color: #133c88; /* Azul oscuro */
+            border-color: #e6e9f8;
+        }
+        .btn-coral:hover {
+            color: #133c88;
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        /* Estilo para el enlace activo en la Navbar */
+        .navbar-nav .nav-item .nav-link.active {
+            color: #ffffff !important;
+            border-bottom: 2px solid #ffffff;
+        }
+        
+        /* INICIO: BANNER PRINCIPAL DE MISIÓN Y VISIÓN */
+        .mv-hero-section {
+            
+            background: url('PEZ.jpg') no-repeat center center; 
+            background-size: cover;
+            height: 40vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .mv-hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Sombra oscura para que el texto blanco resalte */
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }
+        /*BANNER PRINCIPAL */
+        
+        /* INICIO */
+        .mv-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave para que resalte */
+            height: 100%; 
+            position: relative;
+            overflow: hidden;
+        }
+
+        /*  fondo para cada tarjeta */
+        .mv-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center bottom -50px; 
+            opacity: 0.1; 
+            z-index: 0;
+        }
+
+        .mission-card::before {
+          
+           
+            background-size: 150px; 
+        }
+
+        .vision-card::before {
+           
+            
+            background-size: 150px; 
+        }
+
+        .mv-card-content {
+            position: relative;
+            z-index: 1; 
+        }
+
+        .mv-card h3 {
+            color: #133c88; /* Azul oscuro */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Banner del ODS 14 */
+        .ods-14-banner {
+            background-color: #e0f2f7; /* blanco */
+            color: #386fd6;
+            padding: 40px 20px;
+            margin-top: 50px;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg bg-ods-14" data-bs-theme="dark">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="index.html">
+                <img src="logo coralecooo.png" alt="Logo CORALECO" width="215" height="120" class="d-inline-block align-text-top">
+            </a> 
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0"> 
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Quienes Somos
+                        </a>
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item active" href="index.html">Pagina Principal</a></li> 
+                            <li><a class="dropdown-item active" href="nuestra historia.html">Nuestra Historia</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="ods.html">ODS 14</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nuestros Proyectos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="recoleccion.html">Recolección y Limpieza</a></li>
+                            <li><a class="dropdown-item" href="productos.html">Productos Reciclados</a></li>
+                            <li><a class="dropdown-item" href="campañas.html">Campañas de Conciencia</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda (Productos Reciclados)</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                
+                <a href="arecife.html" class="btn btn-coral">
+                    ¡Apoya un Arrecife!
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <header class="mv-hero-section">
+        <div class="mv-hero-overlay"></div>
+        <div class="container mv-hero-content">
+            <h1 class="display-4 fw-bold">Misión y Visión: ¿Por qué y Para qué existe CORALECO?</h1>
+            <p class="lead">No somos solo un proyecto; somos un compromiso con los océanos. Conoce los dos pilares que guían cada paso que damos.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row g-4">
+            
+            <div class="col-md-6">
+                <div class="mv-card mission-card">
+                    <div class="mv-card-content">
+                        <h3>Nuestra Misión: Limpiar, Reutilizar, Concienciar</h3>
+                        <p class="lead">Nuestra meta diaria es clara: Sacar toda la basura plástica de nuestros ríos, lagos y costas. No solo limpiamos, sino que damos una "segunda vida" a ese plástico al transformarlo en productos útiles.</p>
+                        <p>Queremos demostrar que la basura es un recurso y que todos podemos dejar de contaminar, actuando directamente donde más se necesita.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="mv-card vision-card">
+                    <div class="mv-card-content">
+                        <h3>Nuestra Visión: Océanos Libres en el futuro</h3>
+                        <p class="lead">Visualizamos un mundo donde nuestros mares esten limpios, sin contaminación plástica y la vida submarina (corales, peces, tortugas) está a salvo.</p>
+                        <p>Queremos que el mensaje de CORALECO inspire a otras escuelas y comunidades a crear sus propios proyectos de reciclaje y limpieza, creando un movimiento global para el futuro</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ods-14-banner">
+            <h2 class="fw-bold"><i class="fas fa-water me-3"></i>ODS 14: La Meta Mayor</h2>
+            <p class="lead">Todo lo que hacemos busca alcanzar el Objetivo de Desarrollo Sostenible número 14: Conservar y utilizar de forma sostenible los océanos, los mares y los recursos marinos para el desarrollo sostenible.</p>
+            <p>Es nuestro compromiso global y la razón de ser de cada acción de CORALECO.</p>
+        </div>
+
+    </main>
+
+    <footer class="bg-ods-14 text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">CORALECO</h5>
+                    <p>Empoderando la conservación marina y la restauración de arrecifes de coral en apoyo al ODS 14: Vida Submarina.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Enlaces</h5>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">Misión y Visión</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">Proyectos</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-white" style="text-decoration: none;">Donar</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Contacto</h5>
+                    <p>
+                        <i class="fas fa-home me-3"></i>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i> info@coraleco.org
+                    </p>
+                    <p>
+                        <i class="fas fa-phone me-3"></i> +52 (55) 5555 5555
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Síguenos</h5>
+                    <a href="#" class="btn btn-sm btn-coral me-1">FB</a>
+                    <a href="#" class="btn btn-sm btn-coral me-1">IG</a>
+                    <a href="#" class="btn btn-sm btn-coral">TW</a>
+                </div>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">
+                        © 2025 CORALECO. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <p>Comprometidos con el ODS 14.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

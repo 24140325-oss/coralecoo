@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>CORALECO | Productos Reciclados</title>
+    
+    <style>
+        /* Estilo del cuerpo (Consistente con las otras páginas) */
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #133c88;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #f8f9fa; 
+        }
+       
+        /* Colores Consistentes con tu proyecto */
+        .bg-ods-14 {
+            background-color: #386fd6 !important; /* Azul ODS 14 */
+        }
+       
+        .btn-coral {
+            color: #ffffff;
+            background-color: #133c88; /* Azul oscuro */
+            border-color: #e6e9f8;
+        }
+        .btn-coral:hover {
+            color: #133c88;
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        /* Estilo para el enlace activo en la Navbar */
+        .navbar-nav .nav-item .nav-link.active {
+            color: #ffffff !important;
+            border-bottom: 2px solid #ffffff;
+        }
+        
+        /* Estilos Específicos de la página de Productos */
+        .productos-hero {
+          background-color: #133c88;
+            background-size: cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .productos-hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5); 
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }
+        
+        .paso-tarjeta {
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            height: 100%;
+            transition: transform 0.3s;
+        }
+
+        .paso-tarjeta:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-process {
+            font-size: 3.5rem;
+            color: #386fd6; /* Azul ODS 14 */
+            margin-bottom: 15px;
+        }
+        
+        /* Línea de tiempo visual entre pasos (solo en escritorio) */
+        @media (min-width: 768px) {
+            .process-flow {
+                position: relative;
+                padding-bottom: 50px;
+            }
+            .process-flow::before {
+                content: '';
+                position: absolute;
+                top: 45px;
+                left: 5%; 
+                right: 5%; 
+                height: 2px;
+                background-color: #133c88; /* Línea azul oscuro */
+                z-index: 1;
+            }
+            .paso-tarjeta {
+                position: relative;
+                z-index: 2; /* Para que la tarjeta esté encima de la línea */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg bg-ods-14" data-bs-theme="dark">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="index.html">
+                <img src="logo coralecooo.png" alt="Logo CORALECO" width="215" height="120" class="d-inline-block align-text-top">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Quienes Somos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="nuestra historia.html">Nuestra Historia</a></li>
+                            <li><a class="dropdown-item" href="mision y vision.html">Misión y Visión</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="ods 14.html">ODS 14</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nuestros Proyectos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="recoleccion.html">Recolección y Limpieza</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="productos.html">Productos Reciclados</a></li>
+                            <li><a class="dropdown-item" href="campañas.html">Campañas de Conciencia</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda (Productos Reciclados)</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                
+                <a href="arrecife.html" class="btn btn-coral">
+                    ¡Apoya un Arrecife!
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+    <header class="productos-hero">
+        <div class="productos-hero-overlay"></div>
+        <div class="container position-relative z-1">
+            <i class="fas fa-recycle fa-3x mb-3"></i>
+            <h1 class="display-3 fw-bold">Productos Reciclados</h1>
+            <p class="lead">De residuo contaminante a recurso valioso. Conoce el viaje de una botella de plástico marino a un producto CORALECO.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        
+        <div class="row text-center mb-5">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="fw-bold text-primary">El Proceso de Transformación</h2>
+                <p class="fs-5 text-muted">Nuestro laboratorio transforma el plástico recuperado en material 100% reciclado y de alta calidad, cerrando el ciclo de la contaminación.</p>
+            </div>
+        </div>
+
+        <div class="row g-4 process-flow">
+            
+            <div class="col-md-3">
+                <div class="paso-tarjeta bg-light">
+                    <span class="badge bg-ods-14 mb-3">PASO 1</span>
+                    <i class="icon-process fas fa-dolly"></i>
+                    <h4 class="fw-bold" style="color: #133c88;">Recolección y Clasificación</h4>
+                    <p class="text-muted">El material llega a nuestras instalaciones limpio y ya clasificado por tipo, maximizando su valor.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="paso-tarjeta bg-white">
+                    <span class="badge bg-ods-14 mb-3">PASO 2</span>
+                    <i class="icon-process fas fa-soap"></i>
+                    <h4 class="fw-bold" style="color: #133c88;">Trituración y Lavado Profundo</h4>
+                    <p class="text-muted">El plástico se tritura en pequeñas escamas o pellets y se somete a un lavado industrial para eliminar sales, orgánicos y contaminantes residuales.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="paso-tarjeta bg-light">
+                    <span class="badge bg-ods-14 mb-3">PASO 3</span>
+                    <i class="icon-process fas fa-fire-alt"></i>
+                    <h4 class="fw-bold" style="color: #133c88;">Fusión y Peletizado</h4>
+                    <p class="text-muted">El material se funde a altas temperaturas y se extruye en filamentos para crear nuevos gránulos (resina 100% reciclada) listos para la manufactura.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="paso-tarjeta bg-white">
+                    <span class="badge bg-ods-14 mb-3">PASO 4</span>
+                    <i class="icon-process fas fa-box-open"></i>
+                    <h4 class="fw-bold" style="color: #133c88;">Moldeado y Diseño Final</h4>
+                    <p class="text-muted">La resina se inyecta en moldes de diseño exclusivo o se hila para textiles, dando vida a nuestros productos finales con sello de impacto.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row my-5 p-4 align-items-center rounded shadow-sm" style="background-color: #e6e9f8;">
+            <div class="col-md-7">
+                <i class="fas fa-certificate fa-2x mb-3 text-primary"></i>
+                <h3 class="fw-bold" style="color: #133c88;">Calidad, Larga Vida Útil y Precio Accesible</h3>
+                <p>Nuestra inversión en tecnología de punta garantiza que el plástico reciclado no pierda propiedades. Esto nos permite ofrecer **productos de alta calidad, resistentes y de larga vida útil** que compiten en el mercado, ayudando a las personas a evitar el consumismo constante.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="y.jpeg" class="img-fluid rounded shadow-sm" alt="Ejemplo de material reciclado de alta calidad">
+            </div>
+        </div>
+
+        <div class="text-center mt-5 p-4 bg-primary text-white rounded shadow-lg">
+            <h3 class="fw-bold">Explora Nuestros Productos de Uso Cotidiano</h3>
+            <p class="fs-5">Desde Tote Bags y Hoodies hasta Cepillos y Libretas. ¡Tu compra financia la siguiente limpieza!</p>
+            <a href="tienda.html" class="btn btn-light btn-lg mt-3 text-primary fw-bold"><i class="fas fa-shopping-cart me-2"></i>Ver Productos De La Tienda</a>
+        </div>
+
+    </main>
+
+    <footer class="bg-ods-14 text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">CORALECO</h5>
+                    <p>Empoderando la conservación marina y la restauración de arrecifes de coral en apoyo al ODS 14: Vida Submarina.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Enlaces</h5>
+                    <p>
+                        <a href="mision y vision.html" class="text-white" style="text-decoration: none;">Misión y Visión</a>
+                    </p>
+                    <p>
+                        <a href="proyectos.html" class="text-white" style="text-decoration: none;">Proyectos</a>
+                    </p>
+                    <p>
+                        <a href="tienda.html" class="text-white" style="text-decoration: none;">Tienda</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Contacto</h5>
+                    <p>
+                        <i class="fas fa-home me-3"></i> [Dirección de la Sede]
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i> info@coraleco.org
+                    </p>
+                    <p>
+                        <i class="fas fa-phone me-3"></i> +52 (55) 5555 5555
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Síguenos</h5>
+                    <a href="#" class="btn btn-sm btn-coral me-1">FB</a>
+                    <a href="#" class="btn btn-sm btn-coral me-1">IG</a>
+                    <a href="#" class="btn btn-sm btn-coral">TW</a>
+                </div>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">
+                        © 2025 CORALECO. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <p>Comprometidos con el ODS 14.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>

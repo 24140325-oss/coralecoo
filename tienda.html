@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>CORALECO | Tienda de Impacto</title>
+    
+    <style>
+        /* Estilo del cuerpo (Consistente con las otras páginas) */
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            background-image: url('fondo_sutil.jpg'); 
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #f8f9fa; 
+        }
+       
+        /* Colores Consistentes con tu proyecto */
+        .bg-ods-14 {
+            background-color: #386fd6 !important; /* Azul ODS 14 */
+        }
+       
+        .btn-coral {
+            color: #ffffff;
+            background-color: #133c88; /* Azul oscuro */
+            border-color: #e6e9f8;
+        }
+        .btn-coral:hover {
+            color: #133c88;
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        /* Estilo para el enlace activo en la Navbar */
+        .navbar-nav .nav-item .nav-link.active {
+            color: #ffffff !important;
+            border-bottom: 2px solid #ffffff;
+        }
+        
+        /* Estilos Específicos de la Tienda (Rediseñado) */
+        .tienda-hero {
+           background-color: #133c88;
+            background-size: cover;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .tienda-hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5); 
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border: none; /* Eliminar borde para un look más limpio */
+            border-radius: 12px; /* Bordes más suaves */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08); /* Sombra más pronunciada */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px); /* Elevación más notable */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .product-img-container {
+            height: 280px; /* Un poco más grande para mejor visualización */
+            overflow: hidden;
+            background-color: #f0f3f6; /* Fondo claro para las imágenes */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease; /* Efecto zoom en hover */
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+
+        .product-body {
+            padding: 25px;
+            flex-grow: 1; /* Permite que el cuerpo crezca y empuje el botón hacia abajo */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .price-tag {
+            font-size: 1.6rem; /* Precio más grande */
+            font-weight: bold;
+            color: #133c88; 
+            margin-bottom: 15px; /* Más espacio */
+        }
+        
+        .badge-recycle {
+            background-color: #386fd6; 
+            font-size: 0.85rem;
+            padding: 0.4em 0.8em;
+            border-radius: 50px; /* Bordes redondeados para las insignias */
+        }
+
+        .filter-buttons .btn {
+            border-radius: 50px; /* Botones de filtro redondeados */
+            padding: 8px 20px;
+            margin: 5px;
+            font-weight: 500;
+        }
+        
+        .filter-buttons .btn-outline-primary {
+            color: #133c88;
+            border-color: #133c88;
+        }
+        .filter-buttons .btn-outline-primary:hover {
+            background-color: #133c88;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-expand-lg bg-ods-14" data-bs-theme="dark">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="index.html">
+                <img src="logo coralecooo.png" alt="Logo CORALECO" width="215" height="120" class="d-inline-block align-text-top">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Quienes Somos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="nuestra historia.html">Nuestra Historia</a></li>
+                            <li><a class="dropdown-item" href="mision y vision.html">Misión y Visión</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="ods 14.html">ODS 14</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Nuestros Proyectos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="recoleccion.html">Recolección y Limpieza</a></li>
+                            <li><a class="dropdown-item" href="productos.html">Productos Reciclados</a></li>
+                            <li><a class="dropdown-item" href="campañas.html">Campañas de Conciencia</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="tienda.html">Tienda (Productos Reciclados)</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                
+                <a href="arecife.html" class="btn btn-coral">
+                    ¡Apoya un Arrecife!
+                </a>
+                
+            </div>
+        </div>
+    </nav>
+    <header class="tienda-hero">
+        <div class="tienda-hero-overlay"></div>
+        <div class="container position-relative z-1">
+            <i class="fas fa-shopping-bag fa-3x mb-3"></i>
+            <h1 class="display-3 fw-bold">Tienda de Impacto CORALECO</h1>
+            <p class="lead">Productos de buena calidad, a un precio accesible y con una larga vida útil. Evita el consumismo y apoya la limpieza marina.</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        
+        <div class="row text-center mb-5">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="fw-bold text-primary">Moda y Artículos de Uso Cotidiano con un Propósito</h2>
+                <p class="fs-5 text-muted">Cada compra transforma el plástico rescatado del océano en un producto funcional y duradero.</p>
+            </div>
+        </div>
+        
+        <div class="text-center mb-5 filter-buttons">
+            <h4 class="mb-3 fw-bold" style="color: #133c88;">Explora por Categoría:</h4>
+            <div class="d-flex flex-wrap justify-content-center">
+                <button type="button" class="btn btn-coral">Toda la Tienda</button>
+                <button type="button" class="btn btn-outline-primary">Moda (Textiles)</button>
+                <button type="button" class="btn btn-outline-primary">Accesorios y Bisutería</button>
+                <button type="button" class="btn btn-outline-primary">Hogar y Oficina</button>
+                <button type="button" class="btn btn-outline-primary">Novedades</button>
+            </div>
+        </div>
+
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            
+            <div class="col">
+                <div class="card product-card">
+                    <div class="product-img-container">
+                        <img src="tote.jpeg" class="product-img" alt="Tote Bag de Plástico Reciclado">
+                    </div>
+                    <div class="product-body">
+                        <div class="text-center">
+                            <span class="badge badge-recycle mb-2"><i class="fas fa-trash-restore-alt me-1"></i> MODA RECICLADA</span>
+                            <h5 class="card-title fw-bold mt-2">Tote Bag 'Marea Azul'</h5>
+                            <p class="card-text text-muted small">Fabricada con fibras de PET marino. Impermeable y resistente para años de uso.</p>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <p class="price-tag mb-3">$450 MXN</p>
+                            <a href="#" class="btn btn-primary w-100 btn-coral"><i class="fas fa-cart-plus me-2"></i> Añadir al Carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card">
+                    <div class="product-img-container">
+                        <img src="hoodie.jpeg" class="product-img" alt="Hoodie de Fibras Recicladas">
+                    </div>
+                    <div class="product-body">
+                        <div class="text-center">
+                            <span class="badge badge-recycle mb-2"><i class="fas fa-tshirt me-1"></i> MODA RECICLADA</span>
+                            <h5 class="card-title fw-bold mt-2">Hoodie Circular CORAL</h5>
+                            <p class="card-text text-muted small">Suéter con 60% algodón orgánico y 40% PET marino. Calidad que perdura.</p>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <p class="price-tag mb-3">$899 MXN</p>
+                            <a href="#" class="btn btn-primary w-100 btn-coral"><i class="fas fa-cart-plus me-2"></i> Añadir al Carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card">
+                    <div class="product-img-container">
+                        <img src="pulsera.jpeg" class="product-img" alt="Playera Gráfica Reciclada">
+                    </div>
+                    <div class="product-body">
+                        <div class="text-center">
+                            <span class="badge badge-recycle mb-2"><i class="fas fa-tshirt me-1"></i> MODA RECICLADA</span>
+                            <h5 class="card-title fw-bold mt-2">Plulsera piedras estilo marino'</h5>
+                            <p class="card-text text-muted small">Diseño exclusivo. Fabricada para evitar el rápido reemplazo y el consumismo.</p>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <p class="price-tag mb-3">$110 MXN</p>
+                            <a href="#" class="btn btn-primary w-100 btn-coral"><i class="fas fa-cart-plus me-2"></i> Añadir al Carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card">
+                    <div class="product-img-container">
+                        <img src="cepilloo.jpeg" class="product-img" alt="Cepillo estilo playa">
+                    </div>
+                    <div class="product-body">
+                        <div class="text-center">
+                            <span class="badge badge-recycle mb-2"><i class="fas fa-bath me-1"></i> USO COTIDIANO</span>
+                            <h5 class="card-title fw-bold mt-2">Cepillo Ecológico </h5>
+                            <p class="card-text text-muted small">cepillo de madera con cerdas de plastico, increible opcion para un uso diario</p>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <p class="price-tag mb-3">$120 MXN</p>
+                            <a href="#" class="btn btn-primary w-100 btn-coral"><i class="fas fa-cart-plus me-2"></i> Añadir al Carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card product-card">
+                    <div class="product-img-container">
+                        <img src="libreta.jpeg" class="product-img" alt="Libreta con Pasta Reciclada">
+                    </div>
+                    <div class="product-body">
+                        <div class="text-center">
+                            <span class="badge badge-recycle mb-2"><i class="fas fa-book me-1"></i> OFICINA</span>
+                            <h5 class="card-title fw-bold mt-2">Libreta 'Cuerpo de Agua'</h5>
+                            <p class="card-text text-muted small">Pasta rígida de PET reciclado, resistente a la humedad. Ideal para el uso diario.</p>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <p class="price-tag mb-3">$180 MXN</p>
+                            <a href="#" class="btn btn-primary w-100 btn-coral"><i class="fas fa-cart-plus me-2"></i> Añadir al Carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card product-card">
+                    <div class="product-img-container">
+                        <img src="funda.jpeg" class="product-img" alt="Funda para Teléfono Reciclada">
+                    </div>
+                    <div class="product-body">
+                        <div class="text-center">
+                            <span class="badge badge-recycle mb-2"><i class="fas fa-mobile-alt me-1"></i> ACCESORIOS</span>
+                            <h5 class="card-title fw-bold mt-2">Funda Protectora 'Olas'</h5>
+                            <p class="card-text text-muted small">Moldeada con plástico flexible recuperado. Protege tu teléfono y el planeta.</p>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <p class="price-tag mb-3">$250 MXN</p>
+                            <a href="#" class="btn btn-primary w-100 btn-coral"><i class="fas fa-cart-plus me-2"></i> Añadir al Carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card product-card">
+                    <div class="product-img-container">
+                        <img src="dije.jpeg" class="product-img" alt="Collar con Dije Reciclado">
+                    </div>
+                    <div class="product-body">
+                        <div class="text-center">
+                            <span class="badge badge-recycle mb-2"><i class="fas fa-gem me-1"></i> BISUTERÍA</span>
+                            <h5 class="card-title fw-bold mt-2">Collar con Dije Microplástico</h5>
+                            <p class="card-text text-muted small">Cada dije encapsula microplásticos. Una pieza de arte, una historia de impacto.</p>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <p class="price-tag mb-3">$320 MXN</p>
+                            <a href="#" class="btn btn-primary w-100 btn-coral"><i class="fas fa-cart-plus me-2"></i> Añadir al Carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card product-card">
+                    <div class="product-img-container">
+                        <img src="pul.jpeg" class="product-img" alt="Pulsera hecha de plástico reciclado">
+                    </div>
+                    <div class="product-body">
+                        <div class="text-center">
+                            <span class="badge badge-recycle mb-2"><i class="fas fa-gem me-1"></i> BISUTERÍA</span>
+                            <h5 class="card-title fw-bold mt-2">Pulsera 'Corales'</h5>
+                            <p class="card-text text-muted small">Hecha con plásticos de diferentes densidades. Duradera y resistente al agua.</p>
+                        </div>
+                        <div class="text-center mt-auto">
+                            <p class="price-tag mb-3">$150 MXN</p>
+                            <a href="#" class="btn btn-primary w-100 btn-coral"><i class="fas fa-cart-plus me-2"></i> Añadir al Carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="text-center mt-5 p-4 bg-primary text-white rounded shadow-lg">
+            <h3 class="fw-bold">Tu Compra: Anti-Consumismo y Limpieza Marina</h3>
+            <p class="fs-5">Al elegir un producto CORALECO, no solo obtienes un artículo de calidad y duradero, sino que inviertes directamente en la recolección de más basura del océano.</p>
+            <a href="productos.html" class="btn btn-light btn-lg mt-3 text-primary fw-bold"><i class="fas fa-cogs me-2"></i>Ver el Proceso de Elaboración</a>
+        </div>
+
+    </main>
+
+    <footer class="bg-ods-14 text-white pt-5 pb-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">CORALECO</h5>
+                    <p>Empoderando la conservación marina y la restauración de arrecifes de coral en apoyo al ODS 14: Vida Submarina.</p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Enlaces</h5>
+                    <p>
+                        <a href="mision y vision.html" class="text-white" style="text-decoration: none;">Misión y Visión</a>
+                    </p>
+                    <p>
+                        <a href="proyectos.html" class="text-white" style="text-decoration: none;">Proyectos</a>
+                    </p>
+                    <p>
+                        <a href="tienda.html" class="text-white" style="text-decoration: none;">Tienda</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Contacto</h5>
+                    <p>
+                        <i class="fas fa-home me-3"></i> [Dirección de la Sede]
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i> info@coraleco.org
+                    </p>
+                    <p>
+                        <i class="fas fa-phone me-3"></i> +52 (55) 5555 5555
+                    </p>
+                </div>
+
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color: #639eeb;">Síguenos</h5>
+                    <a href="#" class="btn btn-sm btn-coral me-1">FB</a>
+                    <a href="#" class="btn btn-sm btn-coral me-1">IG</a>
+                    <a href="#" class="btn btn-sm btn-coral">TW</a>
+                </div>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p class="text-center text-md-start">
+                        © 2025 CORALECO. Todos los derechos reservados.
+                    </p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end">
+                        <p>Comprometidos con el ODS 14.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>
